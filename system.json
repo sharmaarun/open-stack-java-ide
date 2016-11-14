@@ -1,0 +1,13 @@
+{
+    "projects": {
+        "path":"/home/arunsharma/MS/openstack/project/projects"
+    },
+    "template": {
+        "path": "/home/arunsharma/MS/openstack/project",
+        "name" : "template"
+    },
+    "compiler" : {
+        "host" : "10.9.142.1",
+        "port" : "8020"
+    }
+}

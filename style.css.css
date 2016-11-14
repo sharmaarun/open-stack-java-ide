@@ -1,0 +1,54 @@
+/*
+Error: Invalid CSS after "": expected selector, was "{"
+        on line 1 of ./style.css.map
+
+1: {
+2: "version": 3,
+3: "mappings": "AAAA;;;;;;;;;;;;;;EAcE;AACF;;;EAGE;AAEF,UAKC;EAJC,WAAW,EAAE,gBAAgB;EAC7B,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,GAAG,EAAE,mGAAmG;AAG1G,eAAgB;EACd,WAAW,EAAE,gBAAgB;EAC7B,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,CAAC;EACd,cAAc,EAAE,MAAM;EACtB,cAAc,EAAE,IAAI;EACpB,OAAO,EAAE,YAAY;EACrB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,MAAM;EACjB,SAAS,EAAE,GAAG;EACd,6BAA6B,EAAE,MAAM;EACrC,sBAAsB,EAAE,WAAW;;AAGrC,IAAK;EA2BD,WAAW,EAAE,UAAU;EAxBvB,YAAQ;IACJ,QAAQ,EAAC,QAAQ;IACjB,GAAG,EAAC,GAAG;IACP,KAAK,EAAC,IAAI;IACV,MAAM,EAAC,IAAI;IACX,KAAK,EAAC,IAAI;IACV,WAAW,EAAE,IAAI;IACjB,UAAU,EAAC,OAAO;IAClB,KAAK,EAAC,KAAK;IACX,OAAO,EAAC,CAAC;IACT,UAAU,EAAE,MAAM;IAClB,OAAO,EAAC,IAAI;IAEZ,wBAAY;MACR,OAAO,EAAC,IAAI;IAGhB,4BAAgB;MACZ,OAAO,EAAC,IAAI;MACZ,SAAS,EAAC,IAAI;EAOtB,aAAS;IACL,QAAQ,EAAC,QAAQ;IACjB,MAAM,EAAC,IAAI;IACX,IAAI,EAAC,GAAG;IACR,KAAK,EAAC,IAAI;IACV,GAAG,EAAC,KAAK;EAGb,mBAAe;IACX,QAAQ,EAAC,QAAQ;IACjB,MAAM,EAAC,IAAI;IACX,IAAI,EAAC,IAAI;IACT,KAAK,EAAC,GAAG;IACT,GAAG,EAAC,KAAK;EAIb,0BAAsB;IAClB,UAAU,EAAC,OAAO",
+4: "sources": ["style.scss"],
+5: "names": [],
+6: "file": "style.css"
+
+Backtrace:
+./style.css.map:1
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1179:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1115:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1095:in `expr!'
+/usr/lib/ruby/vendor_ruby/sass/scss/static_parser.rb:20:in `parse_selector'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:425:in `visit_rule'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `map'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:166:in `visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:186:in `visit_root'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:157:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:36:in `css_tree'
+/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:378:in `_render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:295:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin.rb:82:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:359:in `watch_or_update'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:52:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:19:in `parse!'
+/usr/bin/sass:8:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"\": expected selector, was \"{\"\A         on line 1 of ./style.css.map\A \A 1: {\A 2: \"version\": 3,\A 3: \"mappings\": \"AAAA;;;;;;;;;;;;;;EAcE;AACF;;;EAGE;AAEF,UAKC;EAJC,WAAW,EAAE,gBAAgB;EAC7B,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,GAAG,EAAE,mGAAmG;AAG1G,eAAgB;EACd,WAAW,EAAE,gBAAgB;EAC7B,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,CAAC;EACd,cAAc,EAAE,MAAM;EACtB,cAAc,EAAE,IAAI;EACpB,OAAO,EAAE,YAAY;EACrB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,MAAM;EACjB,SAAS,EAAE,GAAG;EACd,6BAA6B,EAAE,MAAM;EACrC,sBAAsB,EAAE,WAAW;;AAGrC,IAAK;EA2BD,WAAW,EAAE,UAAU;EAxBvB,YAAQ;IACJ,QAAQ,EAAC,QAAQ;IACjB,GAAG,EAAC,GAAG;IACP,KAAK,EAAC,IAAI;IACV,MAAM,EAAC,IAAI;IACX,KAAK,EAAC,IAAI;IACV,WAAW,EAAE,IAAI;IACjB,UAAU,EAAC,OAAO;IAClB,KAAK,EAAC,KAAK;IACX,OAAO,EAAC,CAAC;IACT,UAAU,EAAE,MAAM;IAClB,OAAO,EAAC,IAAI;IAEZ,wBAAY;MACR,OAAO,EAAC,IAAI;IAGhB,4BAAgB;MACZ,OAAO,EAAC,IAAI;MACZ,SAAS,EAAC,IAAI;EAOtB,aAAS;IACL,QAAQ,EAAC,QAAQ;IACjB,MAAM,EAAC,IAAI;IACX,IAAI,EAAC,GAAG;IACR,KAAK,EAAC,IAAI;IACV,GAAG,EAAC,KAAK;EAGb,mBAAe;IACX,QAAQ,EAAC,QAAQ;IACjB,MAAM,EAAC,IAAI;IACX,IAAI,EAAC,IAAI;IACT,KAAK,EAAC,GAAG;IACT,GAAG,EAAC,KAAK;EAIb,0BAAsB;IAClB,UAAU,EAAC,OAAO\",\A 4: \"sources\": [\"style.scss\"],\A 5: \"names\": [],\A 6: \"file\": \"style.css\""; }

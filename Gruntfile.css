@@ -1,0 +1,62 @@
+/*
+Error: Invalid CSS after "grunt": expected expression (e.g. 1px, bold), was ".file.readJSON(..."
+        on line 9 of ./Gruntfile.js
+
+4:  * and open the template in the editor.
+5:  *\/
+6: module.exports = function (grunt) {
+7:     // Project configuration.
+8:     grunt.initConfig({
+9:         pkg: grunt.file.readJSON('package.json'),
+10:         uglify: {
+11:             options: {
+12:                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> *\/\n'
+13:             },
+14:             build: {
+
+Backtrace:
+./Gruntfile.js:9
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1179:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/script/lexer.rb:227:in `expected!'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:702:in `assert_done'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:64:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:223:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/script.rb:27:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:1145:in `parse_script'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:718:in `parse_property'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:689:in `parse_property_or_rule'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:655:in `parse_line'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:533:in `build_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:552:in `block in append_children'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:551:in `each'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:551:in `append_children'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:542:in `block in build_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:535:in `each'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:535:in `build_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:552:in `block in append_children'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:551:in `each'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:551:in `append_children'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:542:in `block in build_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:535:in `each'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:535:in `build_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:552:in `block in append_children'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:551:in `each'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:551:in `append_children'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:406:in `_to_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:378:in `_render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:295:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin.rb:82:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:359:in `watch_or_update'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:52:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:19:in `parse!'
+/usr/bin/sass:8:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"grunt\": expected expression (e.g. 1px, bold), was \".file.readJSON(...\"\A         on line 9 of ./Gruntfile.js\A \A 4:  * and open the template in the editor.\A 5:  */\A 6: module.exports = function (grunt) {\A 7:     // Project configuration.\A 8:     grunt.initConfig({\A 9:         pkg: grunt.file.readJSON('package.json'),\A 10:         uglify: {\A 11:             options: {\A 12:                 banner: '/*! <%= pkg.name %> <%= grunt.template.today(\"yyyy-mm-dd\") %> */\n'\A 13:             },\A 14:             build: {"; }
