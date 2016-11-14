@@ -1,7 +1,7 @@
+Please setup the system.json file first
+[ Update the projects base path and template folder path ]
+
 To run the webui:
 
-$cd webui
-
-$grunt
-
-$npm start
+$ sass style.scss > style.css
+$ npm start

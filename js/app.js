@@ -388,12 +388,12 @@ public class Main { \n\
             .subscribe(function (p) {
             _this_.output += "<br/>Done compiling! Output:";
             if (p.output !== undefined && p.output !== null && p.output !== "") {
-                _this_.output += "<br/><b>" + p.output + "</b>";
+                _this_.output += "<br/><b>" + p.output.replace("\n", "<br/>") + "</b>";
             }
             if (p.error !== undefined && p.error !== null && p.error !== "") {
-                _this_.output += "<br/>" + p.error;
+                _this_.output += "<br/><b>" + p.error.replace("\n", "<br/>") + "</b>";
             }
-            _this_.output += "<br/>" + p.msg;
+            _this_.output += "<br/>" + p.msg.replace("\n", "<br/>").replace("\n", "<br/>");
             commons_component_1.Commons.loaderDone("");
             if (cb && !calledBack) {
                 calledBack = true;
@@ -424,12 +424,12 @@ public class Main { \n\
                 .subscribe(function (p) {
                 _this_.output += "<br/> Done executing! Output:";
                 if (p.output !== undefined && p.output !== null && p.output !== "") {
-                    _this_.output += "<br/><b>" + p.output + "</b>";
+                    _this_.output += "<br/><b>" + p.output.replace("\n", "<br/>") + "</b>";
                 }
                 if (p.error !== undefined && p.error !== null && p.error !== "") {
-                    _this_.output += "<br/>" + p.error;
+                    _this_.output += "<br/><b>" + p.error.replace("\n", "<br/>") + "</b>";
                 }
-                _this_.output += "<br/>" + p.msg;
+                _this_.output += "<br/>" + p.msg.replace("\n", "<br/>");
                 commons_component_1.Commons.loaderDone("");
                 if (cb)
                     cb(p);
