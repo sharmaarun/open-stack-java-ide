@@ -129,7 +129,7 @@ socket.emit('CH01', 'me', 'test msg');
         var compile = new fs.run_cmd("java",
                 ["-cp",app.conf.projects.path + "/" + req.body.name,"Main"]);
         
-        return res.json({status:"OK",msg:"Command Executed!",output:compile.stdout.toString(),error:compile.stderr.toString()});
+        return res.json({status:"OK",msg:"Command Executed!",output:compile.stdout,error:compile.stderr});
         
         
 
