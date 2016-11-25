@@ -36,6 +36,15 @@ app.conf = JSON.parse(fs.readFileSync('./system.json', 'utf8'));;
 // require('./config/passport')(passport); // pass passport for configuration
 
 // set up our express application
+console.log("JIDE Server version 1.0");
+console.log("=======================");
+mode = 0;
+if(process.argv[2]!=undefined) {
+	console.log("Node Type:" + process.argv[2]);
+	mode=1;
+}
+
+
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(express.static(__dirname));
@@ -60,6 +69,24 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 require('./routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 // launch ======================================================================
+var http;
+var io;
+if(mode==1){
+http = require('http').Server(app);
+io = require('socket.io')(http);
+io.on('connection', function (socket){
+   console.log('connection');
+
+  socket.on('CH01', function (from, msg) {
+    console.log('MSG', from, ' saying ', msg);
+  });
+
+});
+
+http.listen(3456, function () {
+  console.log('listening on *:3456');
+});
+}
 app.listen(port);
 console.log('The magic happens on port ' + port);
 

@@ -15,7 +15,7 @@
  */
 
 var fs = require('../commons/fs.service');
-
+var io = require('socket.io-client');
 var passport;
 
 
@@ -99,7 +99,7 @@ exports.compileProject = function (req, res) {
         var compile = new fs.run_cmd("javac",
                 [app.conf.projects.path + "/" + req.body.name + "/" + "Main.java"]);
         
-        return res.json({status:"OK",msg:"Command Executed!",output:compile.stdout.toString(),error:compile.stderr.toString()});
+        return res.json({status:"OK",msg:"Command Executed!",output:compile.stdout,error:compile.stderr});
         
         
 
@@ -116,6 +116,14 @@ exports.runProject = function (req, res) {
         return res.status(400).send({status: "ERROR", msg: "Invalid Project Name/ Project not found!"});
     }
     try {
+
+        var socket = io.connect('http://localhost:3456', {reconnect: true});
+
+// Add a connect listener
+socket.on('connect', function (socket) {
+    console.log('Connected!');
+});
+socket.emit('CH01', 'me', 'test msg');
 
         //pass the project full path+name to compiler
         var compile = new fs.run_cmd("java",
